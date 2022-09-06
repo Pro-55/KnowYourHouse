@@ -2,6 +2,8 @@ plugins {
     apply {
         id("com.android.application")
         kotlin("android")
+        kotlin("kapt")
+        id("dagger.hilt.android.plugin")
     }
 }
 
@@ -71,6 +73,13 @@ dependencies {
 
     // Accompanist
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.25.1")
+
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.40.1")
+    kapt("com.google.dagger:hilt-compiler:2.40.1")
+
+    // Hilt ViewModel
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
 
     // Test
     testImplementation("junit:junit:4.13.2")
