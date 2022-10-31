@@ -8,9 +8,9 @@ plugins {
 }
 
 android {
+    namespace = "com.example.knowyourhouse"
     compileSdk = 33
     defaultConfig {
-        applicationId = "com.example.composetest"
         minSdk = 21
         targetSdk = 33
         versionCode = 1
